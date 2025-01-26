@@ -15,6 +15,14 @@ cd employee-management
 ```bash
 pip install -r requirements.txt
 ```
+### Create .env with the following params
+```bash
+DB_HOST=
+DB_USER=
+DB_PASSWORD=
+DB_NAME='employee_management'
+```
+
 ### Run
 ```bash
 python app.py
