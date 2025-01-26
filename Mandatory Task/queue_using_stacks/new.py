@@ -1,10 +1,13 @@
 '''
-Assuming that i can call elements from array/list like :
-if 
+Question: Implement a queue using two stacks.
+
+Assumptions made:
+
+that i can call elements from array/list like this:
 
 a = [1, 2, 3, 4, 5]
 
-lastele = a[-1] ---- assuming i can use such behaviour in the code.
+lastelement = a[-1] ---- assuming i can use such behaviour in the code.
 '''
 
 
