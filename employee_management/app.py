@@ -6,15 +6,17 @@ from log import setup_logging
 def create_app():
     app = Flask(__name__)
     
-    # Setup logging
     setup_logging()
     
-    # Setup routes
     setup_routes(app)
     
     return app
 
-# Run the app
 if __name__ == '__main__':
     app = create_app()
     app.run(debug=True)
+
+
+"""
+look for : create view and sql me .sql 
+"""
