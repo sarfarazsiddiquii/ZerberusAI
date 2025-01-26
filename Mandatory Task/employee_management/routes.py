@@ -59,12 +59,28 @@ def setup_routes(app):
     def update_employee(employee_id):
         try:
             data = request.json
-            validate_employee_data(data['name'], data['email'], data['department'], data['salary'])
 
             connection = get_db_connection()
             cursor = connection.cursor()
 
-            cursor.execute(UPDATE_EMPLOYEE, (data['name'], data['email'], data['department'], data['salary'], employee_id))
+            # Fetch existing employee data
+            cursor.execute("SELECT * FROM employees WHERE id = %s", (employee_id,))
+            existing_employee = cursor.fetchone()
+
+            if not existing_employee:
+                return jsonify({"error": "Employee not found"}), 404
+
+            # Update only the provided fields
+            updated_data = {
+                "name": data.get('name', existing_employee['name']),
+                "email": data.get('email', existing_employee['email']),
+                "department": data.get('department', existing_employee['department']),
+                "salary": data.get('salary', existing_employee['salary'])
+            }
+
+            validate_employee_data(updated_data['name'], updated_data['email'], updated_data['department'], updated_data['salary'])
+
+            cursor.execute(UPDATE_EMPLOYEE, (updated_data['name'], updated_data['email'], updated_data['department'], updated_data['salary'], employee_id))
             
             connection.commit()
             connection.close()
