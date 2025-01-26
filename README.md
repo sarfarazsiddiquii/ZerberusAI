@@ -5,7 +5,7 @@ This repository contains multiple tasks including employee management, queue imp
 
 ### Clone the Project
 ```bash
-git clone https://github.com/sarfarazsiddiquii/ZerberusAI
+git clone https://github.com/sarfarazsiddiquii/ZerberusAI.git
 cd '.\Mandatory Task\'
 cd employee-management
 ```
@@ -25,7 +25,7 @@ check the output using Postman or curl requests.
 
 ### Clone the Project
 ```bash
-git clone https://github.com/sarfarazsiddiquii/ZerberusAI
+git clone https://github.com/sarfarazsiddiquii/ZerberusAI.git
 cd '.\Mandatory Task\'
 cd .\queue_using_stacks\
 ```
@@ -38,7 +38,7 @@ python new.py
 
 ### Clone the Project
 ```bash
-git clone https://github.com/sarfarazsiddiquii/ZerberusAI
+git clone https://github.com/sarfarazsiddiquii/ZerberusAI.git
 cd '.\Optional Task\'
 ```
 ### Run
